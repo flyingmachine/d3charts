@@ -1,0 +1,19 @@
+#+Title: heatmap notes
+
+* components
+** determining dimensions
+** appending an svg
+** adding dimensions to svg
+** row labels
+** column labels
+** initialization
+*** chart data
+*** domain
+*** labels?
+** draw chart
+*** 
+* what gets configured per heatmap?
+** data
+** legend
+** dims
+** grouped?

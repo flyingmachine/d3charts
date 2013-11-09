@@ -42,7 +42,7 @@ this.d3.charts.heatmap = function() {
         d3legend = d3.charts.legend(),
         title    = d3.charts.chartTitle();
 
-    var topMargin  = function () {
+    var topMargin = function () {
       var top = margin.top + titleMargin.top + rowTitleMargin.top;
       top += grouped ? controlHeight : 0;
       return top;
@@ -256,8 +256,8 @@ this.d3.charts.heatmap = function() {
 
     var drawLegend = function() {
       var color  = d3.scale.ordinal()
-          .domain(_.map(legend, function(d) {return d.name}))
-          .range(_.map(legend, function(d) {return d.color}));
+          .domain(_.map(legend, 'name'))
+          .range(_.map(legend, 'color'));
       var d3Legend = d3.charts.legend().color(color);
 
       d3Legend

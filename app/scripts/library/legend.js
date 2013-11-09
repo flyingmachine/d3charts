@@ -6,7 +6,7 @@ if (d3.charts === null || typeof(d3.charts) !== "object") { d3.charts = {}; }
 // Based on http://bost.ocks.org/mike/chart/
 this.d3.charts.legend = function() {
  'use strict';
-
+  
   var x = 0,
     y = 0,
     color =  d3.scale.category10(),
@@ -44,6 +44,13 @@ this.d3.charts.legend = function() {
           .on("click", click);
       }
     });
+  }
+
+  var getter = function(attr){
+    return function(value) {
+      if (!arguments.length) { return attr; }
+      
+    }
   }
 
   // Getters and Setters
